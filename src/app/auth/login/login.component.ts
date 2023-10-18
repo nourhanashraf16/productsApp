@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+
   handleLogin(form : any){
     console.log(form)
-    localStorage.setItem("auth" , "token")
   }
+
+
 }

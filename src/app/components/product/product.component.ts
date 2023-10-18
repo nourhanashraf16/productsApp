@@ -8,7 +8,7 @@ import { ScartService } from 'src/app/services/scart.service';
 })
 export class ProductComponent {
    cartproducts :Array<Iproduct>=[]
-   addToCartDisabled : boolean =false
+  //  addToCartDisabled : boolean =false
   @Input() singleProduct!:Iproduct
   constructor(private cartService :ScartService ){
   }
@@ -21,9 +21,6 @@ export class ProductComponent {
 
 
   handleAddToCart(item:Iproduct){
-    this.addToCartDisabled = true;
   this.cartService.addToCart(item)
   }
-
-
 }

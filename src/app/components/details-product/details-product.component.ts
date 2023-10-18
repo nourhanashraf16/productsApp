@@ -39,17 +39,8 @@ export class DetailsProductComponent {
       console.log(this.cartProducts )
     })
   }
-  handleAddToCart(product:Iproduct){
-    this.addToCartDisabled=true;
-    const productExists = this.cartProducts.some((ele:Iproduct) => {
-      return ele.id === product.id;
-    });
-    if(productExists){
-      console.log("mai")
-      this.addToCartDisabled=true;
-    }else{
-      console.log("mourr")
-      this.serviceCart.addToCart(product)
-    }
+  handleAddToCart(product:any){
+    this.serviceCart.addToCart(product)
+
   }
 }

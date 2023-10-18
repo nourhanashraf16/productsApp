@@ -32,9 +32,7 @@ export class CartComponent {
       item.quantity--
     }
   }
-  // removeItem(product:any){
-  //   this.serviceCart.removeCartItem(product)
-  //   this.updateproducts = this.serviceCart.removeCartItem(product)
-  //   console.log(  this.updateproducts)
-  //   }
+  handleRemove(product:any){
+  this.serviceCart.removeCartItem(product)
+    }
 }

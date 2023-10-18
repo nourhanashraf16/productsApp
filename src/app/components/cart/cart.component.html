@@ -28,7 +28,11 @@
               <button class="btn" (click)="decreaseQuantity(item)">-</button>
             </div>
           </td>
-          <td><button class="btn">x</button></td>
+          <td>
+            <button class="btn remove_btn" (click)="handleRemove(item)">
+              Remove
+            </button>
+          </td>
           <td>{{ item.price * item.quantity }}</td>
         </tr>
       </tbody>
