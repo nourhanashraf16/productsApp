@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+:root {
+  --main-bg: #f7f7f7;
+}
+.product_btn {
+  border: 1px solid #003d29;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  color: #003d29;
+}
+.product_btn:hover {
+  background-color: #003d29;
+  color: #fff;
+}

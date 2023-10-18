@@ -1,0 +1,48 @@
+.card {
+}
+.card_img {
+  position: relative;
+}
+.card_img a {
+  width: 100%;
+}
+.card_img img {
+  width: 100%;
+}
+.card-body {
+  background-color: #fff;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  min-height: 5.4rem;
+}
+.card_outstock {
+  background-color: #cf2626;
+}
+.card_instock {
+  background-color: #2ea124;
+}
+.card_instock,
+.card_outstock {
+  position: absolute;
+  width: 6rem;
+  text-align: center;
+  border-radius: 1rem;
+  color: #fff;
+  top: 1rem;
+  left: 1rem;
+}
+.card_stars span {
+  color: #2ea124;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .card_img a img {
+    height: 16.875rem;
+  }
+  .card-body .card-title {
+    min-height: 4.5rem;
+  }
+}

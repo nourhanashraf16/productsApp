@@ -1,0 +1,24 @@
+.navbar {
+  background-color: #2ea124;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.nav-link,
+.navbar-brand {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.navbar_cart span svg {
+  height: 20px;
+  width: 20px;
+}
+.navbar_cart {
+  position: relative;
+}
+.navbar_cart .navbar_counter {
+  position: absolute;
+  top: -0.25rem;
+  left: 1.5rem;
+}

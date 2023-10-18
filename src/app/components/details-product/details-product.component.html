@@ -1,0 +1,52 @@
+<section class="product_details py-5">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-md-6">
+        <figure><img [src]="product.thumbnail" alt="ll" /></figure>
+      </div>
+      <div class="col-md-6">
+        <div>
+          <h3>{{ product.title }}</h3>
+          <p class="text-secondary">{{ product.description }}</p>
+          <h4>{{ product.price.toFixed(2) | currency }}</h4>
+          <span class="product_details_stars">
+            <ngb-rating [max]="5" [(rate)]="product.rating"></ngb-rating>
+          </span>
+          <p class="text-secondary">
+            suggested payment with 6 month special financing
+          </p>
+          <span *ngIf="product.stock >= 0; then thenBlock" class="product_stock"
+            >out of stock</span
+          >
+          <ng-template #thenBlock>
+            <span class="product_stock"> in stock</span></ng-template
+          >
+          <p class="my-3 text-capitalize normal">more information</p>
+          <div class="d-flex my-3 product_details_links">
+            <a class="mx-3 text-dark">{{ product.category }}</a>
+            <a class="mx-3 text-dark">{{ product.brand }}</a>
+          </div>
+          <div class="d-flex product_details_btns">
+            <button class="btn mx-3">Buy Now</button>
+            <button
+              class="btn mx-3"
+              (click)="handleAddToCart(product)"
+              [disabled]="addToCartDisabled"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 my-3">
+        <div class="row">
+          <div class="col-4" *ngFor="let img of product.images; index as i">
+            <figure class="miniImg">
+              <img [src]="product.images[i]" alt="" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,43 @@
+<div class="card mb-3">
+  <figure class="card_img">
+    <a [routerLink]="['productDetails', singleProduct.id]">
+      <img
+        class="card-img-top"
+        [src]="singleProduct.thumbnail"
+        alt="Card image cap"
+      />
+    </a>
+    <span *ngIf="singleProduct.stock >= 0; then thenBlock" class="card_outstock"
+      >out of stock</span
+    >
+    <ng-template #thenBlock>
+      <span class="card_instock"> in stock</span></ng-template
+    >
+  </figure>
+  <div class="card-body">
+    <div class="card-title d-flex justify-content-between">
+      <h5>{{ singleProduct.title }}</h5>
+      <h5>{{ singleProduct.price.toFixed(2) | currency }}</h5>
+    </div>
+    <p class="card-text text-secondary">
+      {{ singleProduct.description }}
+    </p>
+    <div class="card_stars">
+      <span>
+        <ngb-rating
+          [max]="5"
+          [(rate)]="singleProduct.rating"
+          class="my-3"
+        ></ngb-rating
+      ></span>
+    </div>
+    <button
+      href="#"
+      class="btn product_btn"
+      (click)="handleAddToCart(singleProduct)"
+      [disabled]="addToCartDisabled"
+    >
+      Add to cart
+    </button>
+  </div>
+</div>

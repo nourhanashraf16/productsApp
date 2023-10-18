@@ -1,0 +1,19 @@
+.register_form form {
+  padding: 1rem 2rem;
+}
+.register_form form label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.register_form button {
+  background-color: #2ea124;
+  color: #fff;
+  border: none;
+}
+.register_form p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.register_form p a {
+  text-decoration: underline;
+}
